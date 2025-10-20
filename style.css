@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f7f7f2;
+    color: #1e1e24;
+    padding-top: 90px; /* Prevent content behind fixed header */
+}
+
+/* Header and Navigation */
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center nav horizontally */
+    padding: 1.5rem 3rem;
+    background: transparent;  /* fully transparent */
+    backdrop-filter: none;     /* remove blur */
+    box-shadow: none;          /* remove shadow */
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu li a {
+    color: #df2060;
+    font-weight: 1000;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding: 1.5rem 0;
+    border-bottom: 5px solid transparent;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+    border-bottom: 2px solid #1e1e24;
+    transform: translateY(-3px);
+}
+
+/* Home Section */
+.home-section {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 2rem 5rem;
+    gap: 2rem;
+}
+
+.home-text {
+    grid-column: 1;
+    text-align: left;
+}
+
+.home-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #e91e63; /* pink */
+}
+
+.home-text h3 {
+    position: relative;
+    padding-left: 6rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.home-text h3::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: #1e1e24;
+    top: 1rem;
+    left: 0;
+}
+
+.home-text p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.home-btn {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #fff; /* white text */
+    border: 1px solid #e91e63; /* pink border */
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    background: #e91e63; /* pink background */
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.btn:hover,
+.btn:focus {
+    background: #fff;
+    color: #e91e63;
+    transform: translateY(-3px);
+}
+
+
+/* Home Image */
+.home-image {
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+body {
+    background: url('images/wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #1e1e24;
+    padding-top: 90px; /* to avoid navbar overlap */
+    font-family: "Poppins", sans-serif;
+}
+
+
+/*Contacts */
+
+/* Contact Section */
+.contact-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Pink boxes for input and textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffc0cb; /* light pink */
+  font-size: 1rem;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: #ffb6c1; /* slightly darker pink on focus */
+}
+
+.contact-form button.btn {
+  background-color: #4e684f;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.contact-form button.btn:hover {
+  background-color: #45a049;
+}
+
+/* Contact info horizontal layout */
+/* Contact info horizontal layout */
+.contact-info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* space between items */
+  font-size: 0.95rem;
+}
+
+/* Style for the clickable links */
+.contact-info a {
+  color: #333; /* dark text color */
+  text-decoration: none; /* remove underline */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s;
+}
+
+
+
+
+
+
+
+/* Icon color */
+.contact-info a i {
+  color: #e91e63; /* green icons */
+  font-size: 1.1rem;
+}
+
+/* Hover effect */
+.contact-info a:hover {
+  color: #4CAF50; /* text turns green on hover */
+}
+
+
+
+/*social icon*/
+/* Home Section Social Icons */
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 30px; /* space between icons */
+  justify-content: flex-start; /* align to left of text */
+  align-items: center;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 2.5rem; /* make the icons bigger */
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Official brand colors */
+.social-icons a i.fab.fa-facebook {
+  color: #1877F2; /* Facebook blue */
+}
+
+.social-icons a i.fab.fa-instagram {
+  color: #E1306C; /* Instagram gradient pink */
+}
+
+.social-icons a i.fab.fa-whatsapp {
+  color: #25D366; /* WhatsApp green */
+}
+
+.social-icons a i.fab.fa-tiktok {
+  color: #010101; /* TikTok black */
+}
+
+/* Hover effect: slightly enlarge icons */
+.social-icons a:hover {
+  transform: scale(1.3);
+  opacity: 0.8; /* subtle fade on hover */
+}
+
+
+
+
+
+/*About */
+
+
+
+/* About Section */
+/* About Section */
+.about-section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  background-color: #f7f7f2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about-container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  gap: 50px; /* space between left and right columns */
+}
+
+/* Left Column */
+.about-left {
+  flex: 2;
+  text-align: left;
+}
+
+.about-left h1 {
+  font-size: 3rem;
+  color: #724352;
+  margin-bottom: 30px;
+}
+
+.profile-pic img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #1e1e24;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+/* Right Column */
+.about-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.about-right h2 {
+  font-size: 1.8rem;
+  color: #5c2e3d;
+  margin-bottom: 20px;
+}
+
+.tool-box {
+  background-color: #ffc0cb; /* light pink */
+  padding: 12px 15px;
+  font-size: 1rem;
+  color: #1e1e24;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+  transition: transform 0.3s;
+  cursor: default;
+  border-radius: 5px;
+}
+
+.tool-box:hover {
+  transform: scale(1.05);
+}
+
+/* Adjust icon sizes */
+.tool-box i {
+  font-size: 1.5rem;
+}
+
+/* About Section */
+.about-section {
+  position: fixed;        /* Fix entire section */
+  top: 0;                 /* Align to top of viewport */
+  left: 0;
+  width: 100%;
+  height: 100vh;          /* Fill the viewport */
+  background-color: #f7f7f2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align columns to top */
+  padding: 100px 50px 50px 50px; /* space from navbar and sides */
+  box-sizing: border-box;
+  overflow: hidden;       /* prevent scrollbars */
+}
+
+/* Container for left and right columns */
+.about-container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  gap: 50px;
+  align-items: flex-start;  /* Top align left and right columns */
+}
+
+/* Left Column - About Me */
+.about-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* Profile Picture */
+.profile-pic img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* About text paragraphs */
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #1e1e24;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+/* Right Column - Tools & Technologies */
+.about-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* Tools heading */
+.about-right h2 {
+  font-size: 1.8rem;
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+/* Individual tool boxes */
+.tool-box {
+  background-color: #ffc0cb; /* light pink */
+  padding: 12px 15px;
+  font-size: 1rem;
+  color: #1e1e24;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.tool-box i {
+  font-size: 1.5rem;
+}
+
+.tool-box:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+/* Optional: keep everything visible on smaller screens */
+@media screen and (max-width: 1200px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about-left, .about-right {
+    width: 100%;
+  }
+}
+
+/* projects page */
+
+/* ===== PROJECTS SECTION ===== */
+.projects-section {
+  padding: 120px 20px;
+  background-color: #f7f7f2;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family:Georgia, Times, 'Times New Roman', serif;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  line-height: 1.0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  font-size: 1.4rem;
+  color:rgb(62, 51, 53);
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Highlight active nav link */
+.nav-menu a.active {
+  color: #ff006e;
+  font-weight: bold;
+}
+
